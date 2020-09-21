@@ -1,0 +1,130 @@
+<ion-header class="header_gradient">
+    <ion-navbar text-center>
+        <ion-grid>
+            <ion-row>
+                <ion-col text-left>
+                    <ion-title text-uppercase>
+                        <p>{{(distancia_conductor_cliente*1).toFixed(2)}} KM</p>
+                    </ion-title>
+                </ion-col>
+                <ion-col col-2 (click)="emergencia()" *ngIf="valor_contacto==1">
+                    <ion-icon name="ios-contacts-outline" color="dark" style="font-size: 3em;"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="map">
+        <div #mapa id="mapa"></div>
+    </div>
+</ion-content>
+<ion-footer no-border [ngClass]="fabAction ? 'active animated slideInUp faster' : 'animated slideInDown faster'">
+    <ion-list no-lines>
+        <ion-item>
+            <div class="img_box center_img" item-start *ngIf="valor==1">
+                <img [src]="_domsanitizer.bypassSecurityTrustUrl(imagen)" class="crop_img">
+            </div>
+            <div class="img_box center_img" item-start *ngIf="valor==0">
+                <img src="assets/imgs/user.png" class="crop_img">
+            </div>
+            <h2 class="d-flex">
+                <span>{{conductor.nombre}}</span>
+                <ion-badge class="end">{{(conductor.calificacion*1).toFixed(1)}}
+                    <ion-icon class="material-icons">star_rate</ion-icon>
+                </ion-badge>
+            </h2>
+            <h3 class="d-flex">{{conductor.marca_vehiculo}}&nbsp;{{conductor.modelo_vehiculo}}<span class="end">Llegando en</span></h3>
+            <h4 class="d-flex">{{conductor.placa_vehiculo}}<span class="end">{{tiempo}}</span></h4>
+        </ion-item>
+        <ion-item>
+            <h5 class="d-flex">Información de viaje <span class="end"><strong>{{distancia}}</strong> {{tiempo}}</span></h5>
+            <div class="d-flex item_box">
+                <ion-icon class="material-icons">location_on</ion-icon>
+                <p>{{desde}}</p>
+            </div>
+            <div class="d-flex item_box">
+                <ion-icon class="material-icons">near_me</ion-icon>
+                <p>{{hasta}}</p>
+            </div>
+        </ion-item>
+
+        <ion-item class="ride_details">
+            <ion-row>
+                <ion-col col-4>
+                    <h5>Pagar</h5>
+                    <h2 class="d-flex">
+                        <ion-icon class="material-icons">account_balance_wallet</ion-icon>
+                        S/. {{(monto*1).toFixed(2)}}
+                    </h2>
+                </ion-col>
+                <ion-col col-4>
+                    <h5>Tipo de Vehiculo</h5>
+                    <h2 class="d-flex">
+                        <ion-icon class="material-icons">directions_car</ion-icon>
+                        Moto
+                    </h2>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+    <div class="btn_box" *ngIf="habilitar_chat==0">
+        <ion-row>
+            <ion-col col-3 (click)="compartir()">
+                <h2>
+                    <ion-icon class="material-icons">share</ion-icon>
+                    Compartir viaje
+                </h2>
+            </ion-col>
+            <ion-col col-3 (click)="llamar_conductor()">
+                <h2>
+                    <ion-icon class="material-icons">call</ion-icon>
+                </h2>
+            </ion-col>
+            <ion-col col-3 *ngIf="habilitar_chat==1">
+                <h2>
+
+                </h2>
+            </ion-col>
+            <ion-col col-3 (click)="cancelar_carrera()">
+                <h2>
+                    <ion-icon class="material-icons">clear</ion-icon>
+                    Cancelar
+                </h2>
+            </ion-col>
+            <ion-col col-3>
+                <h2 (click)="toggleFab()" class="more_less_btn">
+                    <ion-icon class="material-icons">keyboard_arrow_up</ion-icon>
+                    <span class="more">Mas</span>
+                    <span class="less">Menos</span>
+                </h2>
+            </ion-col>
+
+        </ion-row>
+
+    </div>
+    <div class="btn_box" *ngIf="habilitar_chat==1">
+        <ion-row>
+            <ion-col col-4 (click)="compartir()">
+                <h2>
+                    <ion-icon class="material-icons">share</ion-icon>
+                    Compartir viaje
+                </h2>
+            </ion-col>
+            <ion-col col-4 (click)="cancelar_carrera()">
+                <h2>
+                    <ion-icon class="material-icons">clear</ion-icon>
+                    Cancelar
+                </h2>
+            </ion-col>
+            <ion-col col-4>
+                <h2 (click)="toggleFab()" class="more_less_btn">
+                    <ion-icon class="material-icons">keyboard_arrow_up</ion-icon>
+                    <span class="more">Mas</span>
+                    <span class="less">Menos</span>
+                </h2>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-footer>

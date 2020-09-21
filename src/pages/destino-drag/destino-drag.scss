@@ -1,0 +1,137 @@
+page-destino-drag{
+    .header {
+        .toolbar {
+            .toolbar-content {
+                position: absolute;
+                width: 100%;
+                left: 0;
+
+                .title {
+                    .toolbar-title {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+       #mapa{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .scroll-content {
+        margin-top: 0 !important;
+    }
+
+    .search_box {
+        position: absolute;
+        top: 125px;
+        width: 100%;
+        height: 45px;
+        width: calc(100% - 30px);
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 8px;
+        padding: 0 14px;
+        background: $item_bg;
+
+        ion-icon {
+            color: $theme-color;
+            font-size: 1.3rem;
+            display: block;
+            margin-right: 13px;
+            min-width: 13px;
+        }
+
+        ion-searchbar {
+            padding: 0;
+            background: none;
+            box-shadow: none;
+            min-height: unset;
+
+            .searchbar-input {
+                padding: 0;
+                font-size: 1.3rem;
+                background: none !important;
+                min-height: unset;
+                box-shadow: none;
+                letter-spacing: .8px;
+                color: $white;
+                line-height: unset;
+
+                &::-webkit-input-placeholder {
+                    color: $white;
+                }
+
+                &::-moz-placeholder {
+                    color: $white;
+                }
+
+                &:-ms-input-placeholder {
+                    color: $white;
+                }
+
+                &:-moz-placeholder {
+                    color: $white;
+                }
+            }
+
+            .searchbar-search-icon {
+                display: none;
+            }
+        }
+    }
+
+    .my_location {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        ion-icon {
+            color: $theme-color;
+            font-size: 1.5rem;
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            top: -3px;
+            left: -2px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            line-height: unset;
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $theme-color;
+            opacity: .2;
+
+        }
+    }
+}

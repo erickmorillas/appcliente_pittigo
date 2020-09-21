@@ -1,0 +1,194 @@
+page-search {
+    .header {
+        .toolbar {
+            .toolbar-content {
+                position: absolute;
+                width: 100%;
+                left: 0;
+
+                .title {
+                    .toolbar-title {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+    #mapa{
+      width: 100%;
+      height: 100%;
+    }
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+      img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+      }
+
+    }
+
+    .scroll-content {
+        margin-top: 0 !important;
+        padding-top: 65px;
+    }
+
+    .list {
+        .item {
+            width: calc(100% - 30px);
+            border-radius: 8px;
+            padding: 5px 13px;
+            background: $item_bg;
+            margin: 0 auto;
+            display: block;
+            border: none !important;
+            box-shadow: none !important;
+            margin-bottom: 11px;
+
+
+            .item-inner {
+                padding: 0;
+                min-height: unset;
+                border: none !important;
+                box-shadow: none !important;
+
+                .label {
+                    margin: 0;
+                    white-space: normal;
+                }
+
+                .input {
+                    border-left: 1px solid $theme-color;
+                    padding: 0 5px;
+
+                    .text-input {
+                        margin: 0;
+                        min-height: unset;
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        color: $white;
+
+                        &::-webkit-input-placeholder {
+                            color: $info;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                        }
+
+                        &::-moz-placeholder {
+                            color: $info;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                        }
+
+                        &:-ms-input-placeholder {
+                            color: $info;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                        }
+
+                        &:-moz-placeholder {
+                            color: $info;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            .item_box {
+                align-items: flex-start;
+                padding: 10px 0;
+
+                ion-icon {
+                    color: $theme-color;
+                    font-size: 1.5rem;
+                    min-width: 28px;
+                    position: relative;
+                    z-index: 99;
+
+                    &.end {
+                        color: $info;
+                        min-width: 18px;
+
+                    }
+                }
+
+                h6 {
+                    margin: 0;
+                    color: $white;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    letter-spacing: .5px;
+                }
+
+                h2 {
+                    margin: 0;
+                    color: $white;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    letter-spacing: .5px;
+
+                    span {
+                        display: block;
+                        padding-top: 3px;
+                        color: $info;
+                        font-weight: 500;
+                        font-size: 1.35rem;
+                        letter-spacing: 0px;
+                    }
+                }
+
+
+            }
+
+            &.item-input {
+                .item_box {
+                    margin: 0 !important;
+                    position: relative;
+
+                    &::after,
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 7px;
+                        height: 50%;
+                        width: 1px;
+                        //                        border-left: 1px dotted $info;
+                        //                        border-width: 3px;
+                        background: $info;
+                        opacity: .4;
+
+
+                    }
+
+                    &::after {
+                        top: unset;
+                        bottom: 0;
+                    }
+
+                    &:first-child {
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,189 @@
+page-searchin_cab {
+    #mapa{
+      width: 100%;
+      height: 100%;
+    }
+    .header {
+        .toolbar {
+            .toolbar-content {
+                position: absolute;
+                width: 100%;
+                left: 0;
+
+                .title {
+                    .toolbar-title {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .scroll-content {
+        margin-top: 0 !important;
+        padding-top: 65px;
+    }
+
+    .end_location {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        ion-icon {
+            color: $theme-color;
+            font-size: 1.5rem;
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            top: -3px;
+            left: -2px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            line-height: unset;
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $theme-color;
+            opacity: .2;
+
+        }
+    }
+
+    .serching_cab {
+        position: absolute;
+        width: 300px;
+        border-radius: 50%;
+        height: 300px;
+        overflow: hidden;
+
+        ion-icon {
+            color: $theme-color;
+            font-size: 1.8rem;
+            position: absolute;
+            width: 17px;
+            height: 18px;
+            top: 0px;
+            left: 0px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            line-height: unset;
+        }
+
+        .animation_box {
+            position: absolute;
+            width: 100%;
+            border-radius: 50%;
+            height: 100%;
+            overflow: hidden;
+            background: $theme-color;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transition: all .3s;
+            opacity: .1;
+
+            &.a {
+                width: 100%;
+                height: 100%;
+                animation: a 3s ease-in-out -0s infinite;
+            }
+
+            &.b {
+                width: 80%;
+                height: 80%;
+                animation: b 3.5s ease-in-out -0s infinite;
+            }
+
+            &.c {
+                width: 60%;
+                height: 60%;
+                animation: c 4s ease-in-out -0s infinite;
+            }
+
+            &.d {
+                width: 40%;
+                height: 40%;
+                animation: d 4.5s ease-in-out -0s infinite;
+            }
+
+            @keyframes a {
+                from {
+                    height: 0%;
+                    width: 0;
+                }
+
+                to {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            @keyframes b {
+                from {
+                    height: 0%;
+                    width: 0;
+                }
+
+                to {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            @keyframes c {
+                from {
+                    height: 0%;
+                    width: 0;
+                }
+
+                to {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            @keyframes d {
+                from {
+                    height: 0%;
+                    width: 0;
+                }
+
+                to {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

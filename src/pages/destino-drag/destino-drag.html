@@ -1,0 +1,23 @@
+<ion-header class="header_gradient">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-uppercase>Seleccione su ubicación</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="bg-color">
+    <div class="map">
+      <div #mapa id="mapa"></div>
+    </div>
+    <br>
+   <!-- <div class="search_box d-flex" (click)="search()">
+    <ion-icon class="material-icons">near_me</ion-icon>
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="se va"></ion-searchbar>
+   </div> -->
+</ion-content>
+<ion-footer>
+    <div align="center">
+      <button ion-button full (click)="poligono_fin()">Seleccionar destino</button>
+    </div>
+</ion-footer>

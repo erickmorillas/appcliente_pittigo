@@ -1,0 +1,29 @@
+<ion-header class="header_gradient">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <ion-title text-uppercase>Home</ion-title> -->
+  </ion-navbar>
+</ion-header>
+<ion-content class="bg-color">
+  <div *ngIf="el_mapa==0">
+    <div class="map">
+      <img src="assets/imgs/map_2.png" />
+    </div>
+  </div>
+  <div *ngIf="el_mapa==1">
+    <div class="map">
+      <div #mapa id="mapa"></div>
+    </div>
+  </div>
+  <br />
+  
+  <div class="search_box d-flex" (click)="search()">
+    <ion-icon class="material-icons">near_me</ion-icon>
+    <ion-searchbar
+      (ionInput)="getItems($event)"
+      placeholder="Hola, ¿A donde quieres ir?"
+    ></ion-searchbar>
+  </div>
+</ion-content>

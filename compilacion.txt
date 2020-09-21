@@ -1,0 +1,20 @@
+Este sirve para crear el compilador.
+ionic cordova build android --prod --release
+
+Este para ubicarse en la carpeta del apk
+
+cd platforms/android/app/build/outputs/apk/release
+
+Este comando genera la clave de certificado (la clave la genero en el directorio raiz del proyecto, asi que solo se debe generar una sola vez)
+keytool -genkey -v -keystore pitigo_cliente.keystore -alias androidreleasekey -keyalg RSA -keysize 2048 -validity 10000
+
+Este comando sirve para empaquetar la clave con el apk
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore pitigo_cliente.keystore app-release-unsigned.apk androidreleasekey
+
+pitigo_cliente123456789
+
+(el password es: pitigo_cliente)
+
+Este comando sirve para generar el APK de produccion
+../../../../../../../zipalign -v 4 app-release-unsigned.apk pitigo_cliente.apk
+*************************************************

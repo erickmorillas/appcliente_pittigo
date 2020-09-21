@@ -1,0 +1,126 @@
+page-wallet {
+    .header.theme_header {
+        .toolbar .title .toolbar-title h2 {
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            margin: 0 -10px;
+            position: relative;
+            z-index: 99;
+            background: darken($item-bg, 10%);
+
+            .col {
+                .button.btn {
+                    height: 55px;
+
+                    ion-icon {
+                        top: 1px;
+                        font-size: 2rem;
+                        margin: 0 13px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .list {
+        margin: 0;
+
+        h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: $info;
+            font-weight: 400;
+            padding: 20px 24px;
+            padding-bottom: 14px;
+        }
+
+        .item {
+            padding: 0px 0px;
+            background: darken($item_bg, 10%);
+            margin: 0 auto;
+            margin-bottom: 5px;
+
+            .item-inner {
+                padding: 0;
+                min-height: unset;
+                border: none !important;
+                box-shadow: none !important;
+
+                .label {
+                    margin: 0;
+                    white-space: normal;
+
+                    .item_header {
+                        background: lighten($item_bg, 0%);
+                        padding: 13px 19px 13px 19px;
+
+                        .img_box {
+                            min-width: 45px;
+                            max-width: 45px;
+                            height: 45px;
+                            border-radius: 7px;
+                            margin-right: 13px;
+                        }
+
+                        .profile_details {
+                            width: 100%;
+
+                            h3 {
+                                margin: 0;
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                                letter-spacing: .7px;
+                                margin-bottom: 5px;
+                                color: $white;
+
+                                .end {
+                                    font-weight: 700;
+                                }
+                            }
+
+                            h4 {
+                                color: $info;
+                                font-weight: 500;
+                                font-size: 1.2rem;
+
+                                .end.d-flex {
+                                    width: auto;
+                                    color: $theme-color;
+                                    font-size: 1.1rem;
+
+                                    ion-icon {
+                                        width: 13px;
+                                        position: relative;
+                                        font-size: 1.7rem;
+                                        position: relative;
+                                        top: 2px;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.spend {
+                .item-inner .label .item_header .profile_details h3 .end {
+                    color: $red_color;
+                }
+
+            }
+
+            &.add {
+                .item-inner .label .item_header .profile_details h3 .end {
+                    color: $green_color;
+                }
+
+            }
+        }
+    }
+}

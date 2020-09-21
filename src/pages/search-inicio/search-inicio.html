@@ -1,0 +1,45 @@
+<ion-header class="header_gradient">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-uppercase>Home</ion-title>
+    
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+   <div class="map">
+      <div #mapa id="mapa"></div>
+    </div>
+    <ion-list no-lines>
+        <ion-item>
+            <div class="d-flex item_box" item-start>
+                <ion-icon class="material-icons">location_on</ion-icon>
+                <h6>2nd avg.World Trade Center, New York lalalala</h6>
+                <ion-icon class="material-icons end" text-end (click)="atras()">clear</ion-icon>
+            </div>
+            <div class="d-flex item_box" item-end>
+                <ion-icon class="material-icons">near_me</ion-icon>
+                <ion-input type="text" placeholder="Ingrese destino" [(ngModel)]="autocomplete.query" (ionChange)="updateSearch()"></ion-input>
+            </div>
+        </ion-item>
+        <ion-item *ngFor="let item of autocompleteItems" text-wrap (click)="chooseItem(item)">
+            <div class="d-flex item_box">
+                <ion-icon class="material-icons">near_me</ion-icon>
+                <h2>{{autocomplete.query}}<span>{{  item.description }}</span></h2>
+            </div>
+        </ion-item>
+        <ion-item (click)="locatino_selected()">
+            <div class="d-flex item_box">
+                <ion-icon class="material-icons">home</ion-icon>
+                <h2>HOME <span>2nd avg.World Trade Center, New York</span></h2>
+            </div>
+            <div class="d-flex item_box">
+                <ion-icon class="material-icons">home</ion-icon>
+                <h2>OFFICE <span>1124, Golden Point Street, New York</span></h2>
+            </div>
+        </ion-item>
+
+    </ion-list>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-menu [content]="content" menu-id="el_menu">
+  <ion-header
+    class="theme_header"
+    style="background-color: #e4e4e4; border-bottom: 1px #d4d4d4 solid"
+  >
+    <div class="profile_box d-flex">
+      <div class="profile_img center_img" *ngIf="imagen!=null">
+        <img
+          [src]="_domsanitizer.bypassSecurityTrustUrl(imagen)"
+          class="crop_img"
+        />
+      </div>
+      <div class="profile_img center_img" *ngIf="imagen==null">
+        <img src="assets/imgs/home/user-white.png" class="crop_img" />
+      </div>
+      <div class="profile_details">
+        <span style="font-size: 1.2em; color: #f8bb00; font-weight: 700"
+          >Hola</span
+        >
+        <h2>{{nombre}}</h2>
+      </div>
+    </div>
+  </ion-header>
+  <ion-content class="">
+    <ion-list no-lines>
+      <ion-item menuClose (click)="home() ">
+        <ion-avatar item-start>
+          <ion-icon class="material-icons">home</ion-icon>
+        </ion-avatar>
+        <h2>{{'home' | translate}}</h2>
+      </ion-item>
+      <ion-item menuClose (click)="my_profile() ">
+        <ion-avatar item-start>
+          <ion-icon class="material-icons">account_circle</ion-icon>
+        </ion-avatar>
+        <h2>Editar Perfil</h2>
+      </ion-item>
+      <ion-item menuClose (click)="my_trips() ">
+        <ion-avatar item-start>
+          <ion-icon class="material-icons">directions_car</ion-icon>
+        </ion-avatar>
+        <h2>Historial de Viajes</h2>
+      </ion-item>
+      <ion-item menuClose (click)="cerrar_sesion()" style="bottom: 0">
+        <ion-avatar item-start>
+          <ion-icon class="material-icons">settings_power</ion-icon>
+        </ion-avatar>
+        <h2>Cerrar Sesión</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage " #content swipeBackEnabled="false "></ion-nav>

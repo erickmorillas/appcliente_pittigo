@@ -1,0 +1,149 @@
+<ion-header class="theme_header">
+  <ion-navbar> </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #333366">
+  <ion-row style="display: flex; justify-content: center;">
+    <img
+      src="assets/imgs/login/logo_login.png"
+      style="width: 50%"
+      alt=""
+      class="imagen"
+    />
+  </ion-row>
+  <ion-row style="display: flex; justify-content: center;text-align: center;margin-top: 10px;">
+    <span style="font-size: 1.5em;"
+      >Tu nueva forma de Viajar!</span
+    >
+  </ion-row>
+  <ion-row
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 35px;
+    "
+  >
+    <span style="font-size: 1em; color: #9e9e9e; text-align: center"
+      >Ingresa a tu cuenta y si aún no tienes una<br />
+      <a (click)="signup()" style="text-decoration: underline"
+        >Creala aqu&iacute;</a
+      >
+    </span>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+      <ion-row>
+        <ion-col col-12>
+          <ion-row>
+            <ion-col
+              col-2
+              style="
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+              "
+            >
+              <img
+                src="assets/imgs/login/icon-email.png"
+                style="width: 40px"
+                alt=""
+                class=""
+              />
+            </ion-col>
+            <ion-col col-10 style="padding-right: 40px">
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <ion-item>
+                  <ion-label style="font-size: 0.9em" floating
+                    >Correo Electrónico*</ion-label
+                  >
+                  <ion-input
+                    style="font-size: 0.9em"
+                    type="email "
+                    [(ngModel)]="data_usuario.login "
+                  ></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-12>
+          <ion-row>
+            <ion-col
+              col-2
+              style="
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+              "
+            >
+              <img
+                src="assets/imgs/login/icon-password.png"
+                style="width: 40px"
+                alt=""
+                class=""
+              />
+            </ion-col>
+            <ion-col col-10 style="padding-right: 40px">
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <ion-item>
+                  <ion-label style="font-size: 0.9em" floating
+                    >Contrase&ntilde;a*</ion-label
+                  >
+                  <ion-input
+                    style="font-size: 0.9em"
+                    type="password"
+                    [(ngModel)]="data_usuario.pass"
+                  ></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <div
+    class=" "
+    style="display: flex; justify-content: center; margin-top: 25px"
+  >
+    <a (click)="recupera_password() " style="font-size: 1em; color: #f8bb00"
+      >¿Olvidaste tu contraseña?</a
+    >
+  </div>
+  <div
+    class=" "
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 45px;
+    "
+  >
+    <a
+      style="
+        background-color: white;
+        border: 2px #5a5ba2 solid;
+        width: 250px;
+        font-size: 1.2em;
+        color: #5a5ba2;
+        text-align: center;
+        border-radius: 25px;
+        padding: 10px 15px;
+      "
+      (click)="login_usuario() "
+      >Siguiente</a
+    >
+  </div>
+</ion-content>

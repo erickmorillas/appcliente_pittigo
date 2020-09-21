@@ -1,0 +1,99 @@
+<ion-header class="theme_header" style="background-image: url('../../../assets/imgs/register/upper_slide.png'); background-size: cover; background-position: center;">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title style="text-align: center;">
+            <img style="width:45px" src="assets/imgs/home/user-white.png" class="crop_img">
+            <h2>Hola {{data_usuario.nombre}}</h2>
+            <p></p>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="">
+    <div class="">
+        <!-- <div class="profile_img_box d-flex" (click)="cambiar_imagen()">
+            <div class="img_box center_img" *ngIf="imagen!=null">
+                <img [src]="_domsanitizer.bypassSecurityTrustUrl(imagen)" class="crop_img">
+            </div>
+            <div class="img_box center_img" *ngIf="imagen==null">
+                <img src="assets/imgs/user.png" class="crop_img">
+            </div>
+            <h2 class="d-flex">
+                <ion-icon class="material-icons">photo_camera</ion-icon>
+                Cambiar Imagen
+            </h2>
+        </div> -->
+        <ion-row style="margin-top:px">
+            <ion-col col-12>
+                <ion-row>
+                    <ion-col col-12>
+                        <ion-row>
+                            <ion-col col-2 style="display:flex;justify-content: flex-end; align-items: flex-end;">
+                                <img src="assets/imgs/home/user.png" style="width: 40px;" alt="" class="">
+                            </ion-col>
+                            <ion-col col-10 style="padding-right: 40px;">
+                                <div style="display:flex;justify-content: center; align-items: center;">
+                                    <ion-item>
+                                        <ion-label style=" font-size: .9em; " floating>Nombres Completos*</ion-label>
+                                        <ion-input style="font-size: .9em; " type="text " [(ngModel)]="data_usuario.nombre "></ion-input>
+                                    </ion-item>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col col-12>
+                        <ion-row>
+                            <ion-col col-2 style="display:flex;justify-content: flex-end; align-items: flex-end;">
+                                <img src="assets/imgs/home/message.png" style="width: 40px;" alt="" class="">
+                            </ion-col>
+                            <ion-col col-10 style="padding-right: 40px;">
+                                <div style="display:flex;justify-content: center; align-items: center;">
+                                    <ion-item>
+                                        <ion-label style=" font-size: .9em; " floating>Email Prinicpal*</ion-label>
+                                        <ion-input style="font-size: .9em; " type="email " [(ngModel)]="data_usuario.email "></ion-input>
+                                    </ion-item>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col col-12>
+                        <ion-row>
+                            <ion-col col-2 style="display:flex;justify-content: flex-end; align-items: flex-end;">
+                                <img src="assets/imgs/home/lock.png" style="width: 40px;" alt="" class="">
+                            </ion-col>
+                            <ion-col col-10 style="padding-right: 40px;">
+                                <div style="display:flex;justify-content: center; align-items: center;">
+                                    <ion-item>
+                                        <ion-label style=" font-size: .9em; " floating>Cambiar Contrase&ntilde;a*</ion-label>
+                                        <ion-input style="font-size: .9em; " type="password " [(ngModel)]="pass1 "></ion-input>
+                                    </ion-item>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col col-12>
+                        <ion-row>
+                            <ion-col col-2 style="display:flex;justify-content: flex-end; align-items: flex-end;">
+                                <img src="assets/imgs/home/lock.png" style="width: 40px;" alt="" class="">
+                            </ion-col>
+                            <ion-col col-10 style="padding-right: 40px;">
+                                <div style="display:flex;justify-content: center; align-items: center;">
+                                    <ion-item>
+                                        <ion-label style=" font-size: .9em; " floating>Repetir Contrase&ntilde;a*</ion-label>
+                                        <ion-input style="font-size: .9em; " type="password " [(ngModel)]="pass2 "></ion-input>
+                                    </ion-item>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class=" " style="display: flex;justify-content: center;align-items: center;margin-top: 55px; ">
+        <a style="background: #f8bb00; width: 250px; font-size: 1.2em; color: #fff;text-align: center; border-radius: 15px; padding: 10px 15px;" (click)="actualizar_password() ">Guardar Cambios</a>
+    </div>
+</ion-content>

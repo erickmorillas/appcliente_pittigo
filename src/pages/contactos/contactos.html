@@ -1,0 +1,28 @@
+<ion-header class="header_gradient">
+  <ion-navbar color="primary" >
+    <button  ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title color="primary">Contactos</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+	<br>
+  <ion-list class="list-full-border">
+  	<ion-item-sliding *ngFor="let item of contactos">	
+    <ion-item >
+      <ion-icon name="ios-contact-outline" color="primary"  item-left></ion-icon>
+      <div >{{ item.nombre }}</div>
+      <div text-wrap>{{ item.telefono }}</div>
+      <span>{{ item.email }}</span>
+    </ion-item>
+     <ion-item-options>
+      <button ion-button color="primary" (click)="borrar(item.telefono)">Borrar</button>
+    </ion-item-options>
+  	</ion-item-sliding>
+  </ion-list>
+  
+</ion-content>
+<ion-footer>
+	<button ion-button block color="primary" (click)="agregar_contacto()">Agregar contacto</button>
+</ion-footer>

@@ -1,0 +1,41 @@
+<ion-header class="theme_header">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <h2>Mis viajes</h2>
+            <p>{{'list_of_rides_booked_by_you' | translate}}</p>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="bg-color">
+    <ion-list no-lines *ngIf="carreras">
+
+        <h2>Viajes anteriores</h2>
+
+        <ion-item *ngFor="let item of carreras">
+            <div class="item_header d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/imgs/user.png" class="crop_img">
+                </div>
+                <div class="profile_details">
+                    <h3 class="d-flex">{{item.fecha | date:'dd/MM/yyyy'}}, {{item.hora_i}} <span class="end">S/. {{(item.monto_real*1).toFixed(2)}} </span></h3>
+                    <h4 class="d-flex">{{nombre}} <span class="end">Efectivo</span></h4>
+                </div>
+            </div>
+            <div class="rides_details">
+                <div class="d-flex item_box">
+                    <ion-icon class="material-icons">location_on</ion-icon>
+                    <h6>{{item.desde}}</h6>
+                </div>
+                <div class="d-flex item_box">
+                    <ion-icon class="material-icons">near_me</ion-icon>
+                    <h6>{{item.hacia}}</h6>
+                </div>
+            </div>
+        </ion-item>
+
+        
+    </ion-list>
+</ion-content>

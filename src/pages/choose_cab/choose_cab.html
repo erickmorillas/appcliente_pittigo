@@ -1,0 +1,123 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="map">
+        <img src="assets/imgs/map.png">
+    </div>
+
+    <div class="near_cab" style="top: 30%; left: 20%;">
+        <img src="assets/imgs/map_car.png">
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <ion-list no-lines radio-group>
+        <ion-scroll scrollX="true">
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car1.png">
+                    </div>
+                    <h2>Go Share</h2>
+                    <h3>Est. $40.50</h3>
+                </ion-label>
+                <ion-radio checked="true" value="1"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car2.png">
+                    </div>
+                    <h2>Go Private</h2>
+                    <h3>Est. $65.50</h3>
+                </ion-label>
+                <ion-radio value="2"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car3.png">
+                    </div>
+                    <h2>Go Luxury</h2>
+                    <h3>Est. $128.20</h3>
+                </ion-label>
+                <ion-radio value="3"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car1.png">
+                    </div>
+                    <h2>Go Share</h2>
+                    <h3>Est. $40.50</h3>
+                </ion-label>
+                <ion-radio value="4"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car2.png">
+                    </div>
+                    <h2>Go Private</h2>
+                    <h3>Est. $65.50</h3>
+                </ion-label>
+                <ion-radio value="5"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car3.png">
+                    </div>
+                    <h2>Go Luxury</h2>
+                    <h3>Est. $128.20</h3>
+                </ion-label>
+                <ion-radio value="7"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car1.png">
+                    </div>
+                    <h2>Go Share</h2>
+                    <h3>Est. $40.50</h3>
+                </ion-label>
+                <ion-radio value="8"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car2.png">
+                    </div>
+                    <h2>Go Private</h2>
+                    <h3>Est. $65.50</h3>
+                </ion-label>
+                <ion-radio value="10"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <div class="img_box">
+                        <img src="assets/imgs/car3.png">
+                    </div>
+                    <h2>Go Luxury</h2>
+                    <h3>Est. $128.20</h3>
+                </ion-label>
+                <ion-radio value="11"></ion-radio>
+            </ion-item>
+        </ion-scroll>
+    </ion-list>
+    <button ion-button full no-margin text-uppercase clear (click)="searchin_cab()" class="btn">Continuar</button>
+</ion-footer>

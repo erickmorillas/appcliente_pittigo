@@ -1,0 +1,230 @@
+page-locatino_selected {
+    .header {
+        .toolbar {
+            .toolbar-content {
+                position: absolute;
+                width: 100%;
+                left: 0;
+
+                .title {
+                    .toolbar-title {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+     #mapa{
+      width: 100%;
+      height: 100%;
+      &.show-map{
+        opacity: 1;
+      }
+    }
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .scroll-content {
+        margin-top: 0 !important;
+        padding-top: 65px;
+    }
+
+    .list {
+        .item {
+            width: calc(100% - 30px);
+            border-radius: 8px;
+            padding: 5px 13px;
+            background: $item_bg;
+            margin: 0 auto;
+            display: block;
+            border: none !important;
+            box-shadow: none !important;
+            margin-bottom: 11px;
+
+
+            .item-inner {
+                padding: 0;
+                min-height: unset;
+                border: none !important;
+                box-shadow: none !important;
+
+                .label {
+                    margin: 0;
+                    white-space: normal;
+                }
+            }
+
+            .item_box {
+                align-items: flex-start;
+                padding: 10px 0;
+
+                ion-icon {
+                    color: $theme-color;
+                    font-size: 1.5rem;
+                    min-width: 28px;
+                    position: relative;
+                    z-index: 99;
+
+                    &.end {
+                        color: $info;
+                        min-width: 18px;
+
+                    }
+                }
+
+                h6 {
+                    margin: 0;
+                    color: $white;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    letter-spacing: .5px;
+                }
+
+                h2 {
+                    margin: 0;
+                    color: $white;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    letter-spacing: .5px;
+
+                    span {
+                        display: block;
+                        padding-top: 3px;
+                        color: $info;
+                        font-weight: 500;
+                        font-size: 1.35rem;
+                        letter-spacing: 0px;
+                    }
+                }
+
+                margin: 0 !important;
+                position: relative;
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 7px;
+                    height: 50%;
+                    width: 1px;
+                    //                        border-left: 1px dotted $info;
+                    //                        border-width: 3px;
+                    background: $info;
+                    opacity: .4;
+
+
+                }
+
+                &::after {
+                    top: unset;
+                    bottom: 0;
+                }
+
+                &:first-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .payment_option {
+        display: block;
+        position: absolute;
+        z-index: 99;
+        background: $white;
+        border-radius: 7px;
+        min-width: 128px;
+        padding: 4px 13px 3px 13px;
+        bottom: 10px;
+        right: 22px;
+        bottom: -100px;
+        transition: all .4s;
+
+        h2 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0;
+            padding: 9px 0px;
+            transition: all .3s;
+            min-width: 110px;
+
+            ion-icon {
+                color: $theme-color;
+                font-size: 1.8rem;
+                margin-right: 9px;
+            }
+
+            &.selected {
+                color: $theme-color;
+                transition: all .3s;
+            }
+        }
+
+        &.active {
+            bottom: 10px;
+            transition: all .4s;
+
+        }
+    }
+
+    .footer {
+        background: $bg-color;
+
+        .btn_box {
+            padding: 16px 20px;
+            background: $item_bg;
+
+            p {
+                color: $white;
+                font-weight: 400;
+                font-size: 1.24rem;
+                margin: 0;
+
+            }
+
+            h2 {
+                color: $theme-color;
+                margin-top: 0;
+                margin-bottom: 0;
+                width: auto;
+                font-size: 1.5rem;
+                font-weight: 400;
+                letter-spacing: .5px;
+
+                ion-icon {
+                    margin-right: 13px;
+                    font-size: 1.55rem;
+
+                }
+            }
+        }
+
+    }
+}

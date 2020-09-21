@@ -1,0 +1,37 @@
+<ion-header class="theme_header">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <h2>Codigo promo</h2>
+            <p></p>
+        </ion-title>
+    </ion-navbar>
+
+    <div class="form">
+        <ion-list no-lines>
+            <ion-item>
+                <ion-label floating>{{'enter_code_here' | translate}}</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="btn-box">
+        <button ion-button full no-margin text-uppercase class="btn">{{'apply_promo_code' | translate}}</button>
+    </div>
+    <div class="referral_code_text_box">
+        <h1 text-center>Codigo referido</h1>
+        <p text-center>Share your referal code with your friends & family and get $10.00 on frist ride booked by them</p>
+    </div>
+    <div class="your_refrral_code">
+        <p text-center>Codigo</p>
+        <h2 text-center>QM21410</h2>
+    </div>
+</ion-content>
+<ion-footer no-border class="bg-color">
+    <button ion-button full clear no-margin text-uppercase class="btn">Compartir</button>
+</ion-footer>

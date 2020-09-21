@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-1 text-left>
+              <button  ion-button clear icon-start (click)="atras()">
+                <ion-icon name="ios-arrow-back" color="dark"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col text-center padding-vertical>
+              <ion-title style="color: #00C1FF">Mensaje a conductor</ion-title>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+  </ion-navbar>
+</ion-header><ion-content id="Content" padding class="color_menu">
+			<ion-grid>
+				<div *ngFor="let item of mensajes">
+					<ion-row>
+							<ion-col col-9 *ngIf="item.id_usuario_envia !== id_usuario" class="message" [ngClass]="{'my_message': item.id_usuario_envia === id_usuario, 'other_message': item.id_usuario_envia !== id_usuario}">
+			        	<span class="user_name">{{ item.nombre }}:</span><br>
+			        	<span><strong>{{ item.mensaje }}</strong></span>
+		      		</ion-col>
+				      <ion-col offset-3 col-9 *ngIf="item.id_usuario_envia === id_usuario" class="message" [ngClass]="{'my_message': item.id_usuario_envia === id_usuario, 'other_message': item.id_usuario_envia !== id_usuario}">
+				        <span class="user_name">{{ item.nombre }}:</span><br>
+				        <span><strong>{{ item.mensaje }}</strong></span>
+				      </ion-col>
+					</ion-row>
+				</div>
+		</ion-grid>
+</ion-content>
+<ion-footer class="toolbar_msg">
+	<ion-toolbar>
+			<ion-row>
+				<ion-col col-9>
+					<ion-input type="text"  [(ngModel)]="data_mensaje" placeholder="Escriba su mensaje"></ion-input>
+				</ion-col>
+				<ion-col col-3>
+					<button ion-button clear (click)="enviar_mensaje()">Enviar</button>
+				</ion-col>
+			</ion-row>
+	</ion-toolbar>
+</ion-footer>

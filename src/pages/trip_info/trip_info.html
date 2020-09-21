@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-uppercase></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+    <div class="map">
+        <img src="assets/imgs/map.png">
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <ion-list no-lines>
+        <ion-item>
+            <div class="img_box center_img" item-start>
+                <img src="assets/imgs/1.png" class="crop_img">
+            </div>
+            <h2 class="d-flex">
+                <span>George Smith</span>
+                <ion-badge class="end">4.7 <ion-icon class="material-icons">star_rate</ion-icon>
+                </ion-badge>
+            </h2>
+            <h3 class="d-flex"> Hyundai WagonR <span class="end">Llegada</span></h3>
+            <h4 class="d-flex">DL 1 ZA 5887 <span class="end">Yesterday, 10:25 pm</span></h4>
+        </ion-item>
+        <ion-item>
+            <h5 class="d-flex">{{'ride_info' | translate}} <span class="end"><strong>08 km</strong> (12 min)</span></h5>
+            <div class="d-flex item_box">
+                <ion-icon class="material-icons">location_on</ion-icon>
+                <p>2nd avg.World Trade Center, New York</p>
+            </div>
+            <div class="d-flex item_box">
+                <ion-icon class="material-icons">near_me</ion-icon>
+                <p>1124, Golden Point Street, New York</p>
+            </div>
+        </ion-item>
+
+        <ion-item class="ride_details">
+            <ion-row>
+                <ion-col col-4>
+                    <h5>Paga via</h5>
+                    <h2 class="d-flex">
+                        <ion-icon class="material-icons">account_balance_wallet</ion-icon>
+                        efectivo
+                    </h2>
+                </ion-col>
+                <ion-col col-4>
+                    <h5>{{'ride_for' | translate}}</h5>
+                    <h2 class="d-flex">
+                        <ion-icon class="material-icons">person</ion-icon>
+
+                    </h2>
+                </ion-col>
+                <ion-col col-4>
+                    <h5>Tipo de viaje</h5>
+                    <h2 class="d-flex">
+                        <ion-icon class="material-icons">directions_car</ion-icon>
+                        Go Private
+                    </h2>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+</ion-footer>
